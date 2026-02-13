@@ -1,0 +1,59 @@
+﻿# --- Python / Jupyter ---
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+ruff_cache/
+*.log
+
+# --- Environments ---
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# --- IDE / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Secrets ---
+.env
+.env.*
+*.pem
+*.key
+
+# --- Data (do NOT track raw/processed datasets) ---
+data/raw/**
+data/processed/**
+data/external/**
+!data/**/.gitkeep
+!data/README.md
+
+# Common large data formats (extra safety)
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.h5ad
+*.loom
+
+# --- Model artifacts (do NOT track binaries) ---
+models/**
+!models/.gitkeep
+!models/README.md
+*.pkl
+*.joblib
+*.onnx
+*.pt
+*.pth
+
+# --- Experiment tracking ---
+mlruns/
+wandb/

@@ -1,0 +1,10 @@
+﻿project:
+  name: cancer-drug-response
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+model:
+  type: elasticnet
+train:
+  test_size: 0.2
+  random_state: 42
