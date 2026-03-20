@@ -47,5 +47,27 @@ Artifacts:
 - `reports/metrics_modeling_dinaciclib_auc.json`
 - `reports/metrics_modeling_dinaciclib_auc.csv`
 
+## Multi-drug benchmark (Top 10 by coverage)
+
+To test whether the pipeline generalizes beyond a single compound, I trained **separate XGBoost models** for the **top 10 compounds by cell-line coverage** (PRISM secondary screen AUC), using a **group-aware split by DepMap cell line (ACH-...)**.
+
+**Aggregate performance (Top 10)**
+- Mean TEST RMSE: **0.1058 ± 0.0287**
+- Mean TEST R²: **0.0444 ± 0.0868**
+
+**Leaderboard (sample)**
+| Compound | TEST RMSE | TEST R² | n cell lines |
+|---|---:|---:|---:|
+| selinexor | 0.0561 | 0.0576 | 475 |
+| tivantinib | 0.0749 | 0.0275 | 475 |
+| dinaciclib | 0.0891 | 0.0810 | 476 |
+| ganetespib | 0.0982 | 0.0483 | 475 |
+| barasertib | 0.1001 | -0.0167 | 475 |
+| tepoxalin | 0.1109 | 0.0040 | 475 |
+
+Artifacts:
+- `reports/leaderboard_top10_auc_xgb.csv`
+- `reports/leaderboard_top10_auc_xgb.json`
+
 ## Notes
 This repo is currently **local-only** (not on GitHub yet). The structure is designed to publish cleanly later.
