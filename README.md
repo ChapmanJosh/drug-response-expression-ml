@@ -21,6 +21,7 @@ flowchart LR
 ```
 
 ## What this repo will include
+
 - Clean train/val/test splitting strategy (leakage-aware)
 - Baseline models (Elastic Net / Random Forest)
 - Strong models (XGBoost or similar)
@@ -38,11 +39,26 @@ flowchart LR
 - `app/` — (later) API/UI demo
 - `tests/` — lightweight tests
 
+## Data (not included in repo)
+
+This repository does **not** include raw or processed datasets. Download the following files and place them into `data/raw/`:
+
+1) **DepMap expression (log2(TPM+1))**
+- File: `OmicsExpressionProteinCodingGenesTPMLogp1.csv`
+- Where: DepMap Portal → “All Data Downloads” (search by filename)
+
+2) **PRISM Repurposing (secondary screen) dose–response parameters**
+- File: `secondary-screen-dose-response-curve-parameters.csv`
+- Where: DepMap PRISM Repurposing → Secondary Screen downloads
+
+Expected layout:
+- `data/raw/OmicsExpressionProteinCodingGenesTPMLogp1.csv`
+- `data/raw/secondary-screen-dose-response-curve-parameters.csv`
+
 ## Quickstart (local)
 1. Create and activate a virtual environment
 2. Install dependencies from `requirements.txt`
-3. Add data following `data/README.md`
-4. Run notebooks in order:
+3. Run notebooks in order:
    - `01_process_expression.ipynb`
    - `02_process_prism_secondary.ipynb`
    - `03_build_modeling_table.ipynb`
