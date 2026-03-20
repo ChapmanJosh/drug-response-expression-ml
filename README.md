@@ -18,6 +18,7 @@ flowchart LR
   E --> F[Group-aware Split<br/>by depmap_id]
   F --> G[Model<br/>Ridge / ElasticNet / XGBoost]
   G --> H[Outputs<br/>metrics (RMSE/R²)<br/>pred-vs-true plot<br/>leaderboard (top-10)]
+```
 
 ## What this repo will include
 - Clean train/val/test splitting strategy (leakage-aware)
