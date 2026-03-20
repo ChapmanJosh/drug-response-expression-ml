@@ -57,3 +57,6 @@ models/**
 # --- Experiment tracking ---
 mlruns/
 wandb/
+
+!reports/leaderboard_top10_auc_xgb.csv
+!reports/metrics_modeling_*_auc.csv
