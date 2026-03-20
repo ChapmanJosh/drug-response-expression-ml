@@ -11,13 +11,13 @@ This project predicts **compound-specific drug sensitivity** from **baseline gen
 
 ```mermaid
 flowchart LR
-  A[DepMap Expression<br/>log2(TPM+1)] --> B[Preprocessing<br/>median impute<br/>top-variance genes (e.g., 2000)]
-  C[PRISM Secondary Screen<br/>dose–response params] --> D[Target Engineering<br/>select compound<br/>AUC per cell line]
-  B --> E[Merge on depmap_id<br/>cell line]
+  A["DepMap Expression (log2(TPM plus 1))"] --> B["Preprocessing: median impute; top-variance genes (e.g., 2000)"]
+  C["PRISM Secondary Screen: dose-response params"] --> D["Target Engineering: select compound; AUC per cell line"]
+  B --> E["Merge on depmap_id (cell line)"]
   D --> E
-  E --> F[Group-aware Split<br/>by depmap_id]
-  F --> G[Model<br/>Ridge / ElasticNet / XGBoost]
-  G --> H[Outputs<br/>metrics (RMSE/R²)<br/>pred-vs-true plot<br/>leaderboard (top-10)]
+  E --> F["Group-aware Split by depmap_id"]
+  F --> G["Model: Ridge / ElasticNet / XGBoost"]
+  G --> H["Outputs: metrics (RMSE/R²); pred-vs-true plot; leaderboard (top-10)"]
 ```
 
 ## What this repo will include
