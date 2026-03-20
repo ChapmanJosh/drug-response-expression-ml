@@ -1,7 +1,7 @@
 ﻿# Cancer Drug Response Prediction from Gene Expression
 
 ## Goal
-Build a reproducible machine learning pipeline that predicts **drug response** (e.g., IC50/AUC) from **gene expression** data, suitable for a biotech ML portfolio.
+Build a reproducible machine learning pipeline that predicts **drug response** (e.g., IC50/AUC) from **gene expression** data.
 
 ## Overview
 
@@ -47,6 +47,7 @@ flowchart LR
    - `02_process_prism_secondary.ipynb`
    - `03_build_modeling_table.ipynb`
    - `04_train_baselines.ipynb`
+   - `05_shap_interpretability.ipynb`
    - `06_multidrug_top10_leaderboard.ipynb`
 
 ## Results (single-drug model: dinaciclib)
